@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Edit_product";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="page-title">Chỉnh sửa sản sản phẩm</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Header -->
+
+            <div class="card">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form action="@Url.Action("Products","Home")">
+                        <div class="form-group">
+                            <label>Mã sản phẩm</label>
+                            <input class="form-control" type="text" value="0092" />
+                        </div>
+                        <div class="form-group">
+                            <label>Mã danh mục</label>
+                            <input class="form-control" type="text" value="03" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tên sản phẩm</label>
+                            <input class="form-control" type="text" value="Túi đeo chéo họa tiết dập chỉ SD0092" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giá bán</label>
+                            <input class="form-control" type="text" value="710.000" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giá giảm</label>
+                            <input class="form-control" type="text" value="785,000" />
+                        </div>
+                        <div class="form-group">
+                            <label>Màu sắc</label>
+                            <input class="form-control" type="text" value="Be" />
+                        </div>
+                        <div class="form-group">
+                            <label>Chất liệu</label>
+                            <input class="form-control" type="text" value="Da tổng hợp" />
+                        </div>
+                        <div class="form-group">
+                            <label>Loại dây đeo</label>
+                            <input class="form-control" type="text" value="Kim Loại" />
+                        </div>
+                        <div class="form-group">
+                            <label>Kích thước</label>
+                            <input class="form-control" type="text" value="23*8*13" />
+                        </div>
+                        <div class="form-group">
+                            <label>Số ngăn</label>
+                            <input class="form-control" type="number" value="1" />
+                        </div>
+                        <div class="form-group">
+                            <label>Dòng</label>
+                            <input class="form-control" type="text" value="đi làm, đi chơi, đi tiệc" />
+                        </div>
+                        <div class="form-group">
+                            <label>Mô tả</label>
+                            <input class="form-control" type="text" value="- Thiết kế dập chỉ nổi tinh tế.
+            - Dáng nắp gập phối khóa xoay kim loại chắc chắn.
+            - Không gian túi 1 lớn chứa đủ các vật dụng cơ bản.
+            - Gam màu hiện đại, phù hợp với nhiều trang phục." />
+                        </div>
+                        <div class="form-group">
+                            <label>Ảnh</label>
+                            <input class="form-control" type="text" value="assets/img/product/product-01.jpg" />
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="submit">Sửa</button>
+                            <a href="@Url.Action("Products","Home")" class="btn btn-link">Huỷ</a>
+                        </div>
+                    </form>
+                    <!-- /Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

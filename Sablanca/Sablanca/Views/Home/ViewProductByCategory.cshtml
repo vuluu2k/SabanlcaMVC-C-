@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Sablanca.Models.SanPham>
+@{
+    ViewBag.Title = "XemSanPhamTheoDanhMuc";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+<section class="section recent-part">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Danh mục @ViewBag.TenDanhMuc</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <img src="@Url.Content("~/wwwroot/AnhSP/" + item.AnhSP)"
+                                 alt="product" width="100%" height="150px" class="img-responsive center-block" />
+                        </div>
+                        <div class="product-content">
+                            <h6 class="product-name">
+                                <a href="@Url.Action("Product", "Home", new { id = item.MaSP })">@item.TenSP</a>
+                            </h6>
+                            <h6 class="product-price">
+                                <span>@string.Format("{0:#,##}", item.GiaBan)đ</span>
+                            </h6>
+                            <button class="product-add" title="Thêm vào giỏ">
+                                <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-btn-25">
+                    <a href="category.html" class="btn btn-outline"><i class="fas fa-eye"></i><span>xem thêm</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+

@@ -1,0 +1,47 @@
+﻿@model Sablanca.Models.DanhMuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content container-fluid">
+    <h2>Chi tiết danh mục</h2>
+
+    <div>
+        <dl class="dl-horizontal">
+            <table>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.TenDM)</th>
+                    <td>@Html.DisplayFor(model => model.TenDM)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.MoTa)</th>
+                    <td>@Html.DisplayFor(model => model.MoTa)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            @*<dt>
+                @Html.DisplayNameFor(model => model.TenDM)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenDM)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MoTa)
+            </dd>*@
+
+        </dl>
+    </div>@Html.ActionLink("Quay lại", "Index")
+    </p>
+</div>
+
+    

@@ -1,0 +1,223 @@
+﻿
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content container-fluid">
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="page-title">Quản lý danh mục</h3>
+            </div>
+            <div class="col-auto text-right">
+                <a href="@Url.Action("Add_category","Home")"
+                   class="btn btn-primary add-button ml-3">
+                    <i class="fas fa-plus"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Mã danh mục</th>
+                                    <th>Tên danh mục</th>
+                                    <th>Mô tả</th>
+                                    <th class="text-right">Hành động</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>01</td>
+                                    <td>Túi xách mới nhất</td>
+                                    <td>  </td>
+                                    <td class="text-right">
+                                        <a href="@Url.Action("Edit_category","Home")"
+                                           class="btn btn-sm bg-success-light mr-2">
+                                            <i class="far fa-edit mr-1"></i>Sửa
+                                        </a>
+                                        <a data-id="40"
+                                           href="javascript:void(0);"
+                                           class="
+                                btn btn-sm
+                                bg-danger-light
+                                mr-2
+                                delete_review_comment
+                              "
+                                           data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <i class="far fa-trash-alt mr-1"></i> Xoá
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>02</td>
+                                    <td>Túi xách tay</td>
+                                    <td>Túi xách tay nữ Sablanca thời trang với chất liệu cao cấp cùng mẫu mã đẹp cập nhật theo xu hướng quốc tế. Túi handbag, túi Satchel, túi Tote cỡ lớn, cỡ vừa, cỡ nhỏ phù hợp với nhiều mục đích sử dụng như đi chơi, đi làm, công sở, dự tiệc.</td>
+                                    <td class="text-right">
+                                        <a href="@Url.Action("Edit_category","Home")"
+                                           class="btn btn-sm bg-success-light mr-2">
+                                            <i class="far fa-edit mr-1"></i>Sửa
+                                        </a>
+                                        <a data-id="40"
+                                           href="javascript:void(0);"
+                                           class="
+                                btn btn-sm
+                                bg-danger-light
+                                mr-2
+                                delete_review_comment
+                              "
+                                           data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <i class="far fa-trash-alt mr-1"></i> Xoá
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>03</td>
+                                    <td>Túi xách đeo chéo</td>
+                                    <td>
+                                        Túi đeo chéo, túi đeo vai là phụ kiện bất cứ cô gái nào cũng nên sở hữu cho mình. Túi đeo chéo nhỏ xinh từ lâu không còn xa lạ gì với các tín đồ yêu thời trang. Nàng có thể ứng dụng nó trong rất nhiều hoàn cảnh, đi cùng rất nhiều trang phục phong cách khác nhau, khi nữ tính nếu kết hợp với váy, khi nghịch ngợm, trẻ trung nếu diện cùng cùng các loại quần short, đầm váy hay jeans rách cá tính nhé.
+
+                                    </td>
+                                    <td class="text-right">
+                                        <a href="@Url.Action("Edit_category","Home")"
+                                           class="btn btn-sm bg-success-light mr-2">
+                                            <i class="far fa-edit mr-1"></i>Sửa
+                                        </a>
+                                        <a data-id="40"
+                                           href="javascript:void(0);"
+                                           class="
+                                btn btn-sm
+                                bg-danger-light
+                                mr-2
+                                delete_review_comment
+                              "
+                                           data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <i class="far fa-trash-alt mr-1"></i> Xoá
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>04</td>
+                                    <td>Ví cầm tay</td>
+                                    <td>  </td>
+                                    <td class="text-right">
+                                        <a href="@Url.Action("Edit_category","Home")"
+                                           class="btn btn-sm bg-success-light mr-2">
+                                            <i class="far fa-edit mr-1"></i>Sửa
+                                        </a>
+                                        <a data-id="40"
+                                           href="javascript:void(0);"
+                                           class="
+                                btn btn-sm
+                                bg-danger-light
+                                mr-2
+                                delete_review_comment
+                              "
+                                           data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <i class="far fa-trash-alt mr-1"></i> Xoá
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>05</td>
+                                    <td>Ví dự tiệc</td>
+                                    <td>  </td>
+                                    <td class="text-right">
+                                        <a href="@Url.Action("Edit_category","Home")"
+                                           class="btn btn-sm bg-success-light mr-2">
+                                            <i class="far fa-edit mr-1"></i>Sửa
+                                        </a>
+                                        <a data-id="40"
+                                           href="javascript:void(0);"
+                                           class="
+                                btn btn-sm
+                                bg-danger-light
+                                mr-2
+                                delete_review_comment
+                              "
+                                           data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <i class="far fa-trash-alt mr-1"></i> Xoá
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>06</td>
+                                    <td>Balo</td>
+                                    <td>  </td>
+                                    <td class="text-right">
+                                        <a href="@Url.Action("Edit_category","Home")"
+                                           class="btn btn-sm bg-success-light mr-2">
+                                            <i class="far fa-edit mr-1"></i>Sửa
+                                        </a>
+                                        <a data-id="40"
+                                           href="javascript:void(0);"
+                                           class="
+                                btn btn-sm
+                                bg-danger-light
+                                mr-2
+                                delete_review_comment
+                              "
+                                           data-toggle="modal"
+                                           data-target="#exampleModal">
+                                            <i class="far fa-trash-alt mr-1"></i> Xoá
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade"
+     id="exampleModal"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xác nhận?</h5>
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">Bạn có muốn xoá bản ghi này?</div>
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Không
+                </button>
+                <button type="button" class="btn btn-primary">Đồng ý</button>
+            </div>
+        </div>
+    </div>
+</div>

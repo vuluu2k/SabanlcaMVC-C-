@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Trang không tồn tại";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+@section addcss{
+    <link href="~/wwwroot/css/custom/error.css" rel="stylesheet" />
+}
+
+<section class="error-part">
+    <div class="container">
+        <h1>404 | Trang không tồn tại</h1>
+        <img class="img-fluid" src="~/wwwroot/images/error.png" alt="error" />
+        <h3>Lỗi! Trang bạn truy cập không tồn tại!</h3>
+        <p>Vui lòng quay lại trang chủ và thông báo cho chúng tôi!</p>
+        <a href="/">Quay lại</a>
+    </div>
+</section>
+

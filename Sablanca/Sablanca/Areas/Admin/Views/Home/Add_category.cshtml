@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Add_category";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="page-title">Thêm danh mục</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Header -->
+
+            <div class="card">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form action="@Url.Action("Categories","Home")">
+                        <div class="form-group">
+                            <label>Mã danh mục</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tên danh mục</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mô tả</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="submit">
+                                Thêm
+                            </button>
+                            <a href="@Url.Action("Categories","Home")" class="btn btn-link">Huỷ</a>
+                        </div>
+                    </form>
+                    <!-- Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      </div>
+

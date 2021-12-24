@@ -1,0 +1,122 @@
+﻿@model Sablanca.Models.TaiKhoan
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from mironmahmud.com/organe/assets/ltr/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jun 2021 14:24:42 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type"
+      content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="mironcoder" />
+    <meta name="email" content="mironcoder@gmail.com" />
+    <meta name="profile" content="https://themeforest.net/user/mironcoder" />
+    <meta name="template" content="Organe" />
+    <meta name="title" content="Sablanca - Phong cách thời trang theo xu hướng quốc tế" />
+    <meta name="keywords" content="giày dép nữ thời trang, túi xách nữ thời trang, ví nữ thời trang, ba lô nữ thời trang" />
+    <title>Đăng ký</title>
+    <link rel="icon" href="~/wwwroot/images/favicon.ico" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/custom/main.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/custom/user-form.css" />
+</head>
+<body>
+    <section class="user-form-part">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div class="user-form-logo">
+                        <a href="@Url.Action("Index","Home")"><img src="~/wwwroot/images/logo_sab.png" alt="logo" /></a>
+                    </div>
+                    <div class="user-form-card">
+                        <div class="user-form-title">
+                            <h2>Tham gia ngay!</h2>
+                            <p>Nhập thông tin để tạo tài khoản</p>
+                        </div>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label>Tên Tài khoản</label>
+                                <div>
+                                    @Html.EditorFor(model => model.MaTK, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.MaTK, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Họ và tên</label>
+                                <div>
+                                    @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Số điện thoại</label>
+                                <div>
+                                    @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Địa chỉ</label>
+                                <div>
+                                    @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <div>
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mật khẩu</label>
+                                <div>
+                                    @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-button">
+                                    <input type="submit" value="Đăng kí" class="btn btn-default" />
+                                </div>
+                            </div>
+                        }
+                    </div>
+                        <div class="user-form-remind">
+                            <p>Bạn đã có tài khoản?<a href="@Url.Action("Index","TaiKhoans")">Đăng nhập</a></p>
+                        </div>
+
+
+                        <div class="user-form-footer">
+                            <p>&copy; Bản quyền thuộc về Nhóm 14</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/wwwroot/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/wwwroot/js/vendor/popper.min.js"></script>
+    <script src="~/wwwroot/js/vendor/bootstrap.min.js"></script>
+</body>
+<!-- Mirrored from mironmahmud.com/organe/assets/ltr/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jun 2021 14:24:42 GMT -->
+</html>

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="mironcoder" />
+    <meta name="email" content="mironcoder@gmail.com" />
+    <meta name="profile" content="https://themeforest.net/user/mironcoder" />
+    <meta name="template" content="Organe" />
+    <meta name="title" content="Sablanca - Phong cách thời trang theo xu hướng quốc tế" />
+    <meta name="keywords" content="giày dép nữ thời trang, túi xách nữ thời trang, ví nữ thời trang, ba lô nữ thời trang" />
+    <title>Sablanca - Phong cách thời trang theo xu hướng quốc tế</title>
+    <link rel="icon" href="~/wwwroot/images/favicon.ico" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/fontawesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/nice-select.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/venobox.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/slick.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/custom/main.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/custom/index.css" />
+</head>
+
+<body>
+    <div class="backdrop"></div>
+    @{ 
+        Html.RenderAction("_Header","Home");
+     }
+    <!-- Start menu pc -->
+    @{ 
+        Html.RenderAction("_MenuPC","Home");
+     }
+    <!-- End menu pc -->
+
+    @RenderBody()
+    <section class="intro-part">
+        <div class="container">
+            <div class="row intro-content">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <div class="intro-icon"><i class="fas fa-truck"></i></div>
+                        <div class="intro-content">
+                            <h5>miễn phí giao hàng</h5>
+                            <p>
+                                Cho đơn hàng từ 200.000 trở lên. (Áp dụng nội thành Hồ Chí Minh)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <div class="intro-icon"><i class="fas fa-sync-alt"></i></div>
+                        <div class="intro-content">
+                            <h5>Hoàn tiền 100%</h5>
+                            <p>Đổi trả hoàn tiền 100% không cần lý do</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <div class="intro-icon"><i class="fas fa-headset"></i></div>
+                        <div class="intro-content">
+                            <h5>hỗ trợ 24/7</h5>
+                            <p>Đội ngũ hỗ trợ giải quyết vấn đề 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <div class="intro-icon"><i class="fas fa-lock"></i></div>
+                        <div class="intro-content">
+                            <h5>Thanh toán nhanh</h5>
+                            <p>Hỗ trợ các phương thức thanh toán an toàn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="footer-widget">
+                        <a class="footer-logo" href="#">
+                            <img src="~/wwwroot/images/logo_sab.png"
+                                 alt="logo" />
+                        </a>
+                        <p class="footer-desc">
+                            Sablanca là công ty sản xuất, kinh doanh chuỗi cửa hàng thời trang cao cấp về túi xách, ví, ba lô,… dành cho phái nữ
+                        </p>
+                        <ul class="footer-social">
+                            <li><a class="icofont-facebook" href="https://www.facebook.com/Sablanca.vn"></a></li>
+                            <li><a class="icofont-twitter" href="#"></a></li>
+                            <li><a class="icofont-linkedin" href="#"></a></li>
+                            <li><a class="icofont-instagram" href="https://www.instagram.com/sablanca.vn/"></a></li>
+                            <li><a class="icofont-pinterest" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="footer-widget contact">
+                        <h3 class="footer-title">liên hệ</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="icofont-ui-email"></i>
+                                <p>
+                                    <span>contact@sablanca.vn</span>
+                                </p>
+                            </li>
+                            <li>
+                                <i class="icofont-ui-touch-phone"></i>
+                                <p>
+                                    <span>1800 6050</span>
+                                </p>
+                            </li>
+                            <li>
+                                <i class="icofont-location-pin"></i>
+                                <p>Trụ sở chính: 248C Phan Đình Phùng, P1, Q.Phú Nhuận, HCM.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">hướng dẫn & hỗ trợ</h3>
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                                <li><a href="#">Chính sách đổi trả</a></li>
+                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Hệ thống 23 cửa hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="footer-widget">
+                        <h3 class="footer-title">Download App</h3>
+                        <p class="footer-desc">
+                            Ứng dụng Sablanca đã có trên Google Play & App Store. Tải ứng
+                            dụng ngay!
+                        </p>
+                        <div class="footer-app">
+                            <a href="#"><img src="~/wwwroot/images/google-store.png" alt="google" /></a><a href="#"><img src="~/wwwroot/images/app-store.png" alt="app" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <p class="footer-copytext">
+                            &copy; Bản quyền thuộc về Nhóm 14
+                        </p>
+                        <div class="footer-card">
+                            <a href="#"><img src="~/wwwroot/images/payment/jpg/01.jpg" alt="payment" /></a><a href="#"><img src="~/wwwroot/images/payment/jpg/02.jpg" alt="payment" /></a><a href="#"><img src="~/wwwroot/images/payment/jpg/03.jpg" alt="payment" /></a><a href="#">
+                                <img src="~/wwwroot/images/payment/jpg/04.jpg" alt="payment" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/wwwroot/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/wwwroot/js/vendor/popper.min.js"></script>
+    <script src="~/wwwroot/js/vendor/bootstrap.min.js"></script>
+    <script src="~/wwwroot/js/vendor/nice-select.min.js"></script>
+    <script src="~/wwwroot/js/vendor/venobox.min.js"></script>
+    <script src="~/wwwroot/js/vendor/countdown.min.js"></script>
+    <script src="~/wwwroot/js/vendor/slick.min.js"></script>
+    <script src="~/wwwroot/js/custom/nice-select.js"></script>
+    <script src="~/wwwroot/js/custom/countdown.js"></script>
+    <script src="~/wwwroot/js/custom/accordion.js"></script>
+    <script src="~/wwwroot/js/custom/venobox.js"></script>
+    <script src="~/wwwroot/js/custom/slick.js"></script>
+    <script src="~/wwwroot/js/custom/main.js"></script>
+</body>
+<!-- Mirrored from mironmahmud.com/organe/assets/ltr/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jun 2021 14:24:36 GMT -->
+</html>

@@ -1,0 +1,48 @@
+﻿<section class="header-part">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-media-group">
+                <button class="header-user">
+                    <img src="~/wwwroot/images/user.png" alt="user" />
+                </button><a href="@Url.Action("Index","Home")">
+
+                    <img src=""
+                         alt="logo" />
+                </a><button class="header-src"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="@Url.Action("Index","Home")" class="header-logo">
+                <img src="~/wwwroot/images/logo_sab.png"
+                     alt="logo" />
+            </a>
+
+            @if (Session["HoTen"] == null)
+            {
+                <a href="@Url.Action("Index","Taikhoans")" class="header-widget" title="My Account">
+                    <img src="~/wwwroot/images/user.png" alt="user"><span>Đăng nhập</span>
+                </a>
+            }
+            else
+            {
+                <a href="@Url.Action("Details","TaiKhoans", new { id=Session["idUser"] })" class="header-widget" title="My Account">
+                    <img src="~/wwwroot/images/user.png" alt="user"><span>@Session["HoTen"]</span>
+                </a>
+            }
+
+
+
+
+            <form class="header-form">
+                <input type="text" placeholder="Tìm kiếm..." /><button>
+                    <i class="fas footer-social"></i>
+                </button>
+            </form>
+            <div class="header-widget-group">
+                <a class="header-widget header-cart"
+                   title="Cartlist"
+                   href="@Url.Action("Checkout","Home")">
+                    <i class="fas fa-shopping-basket"></i><sup>2</sup><span>Tổng<small>1.220.000đ</small></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

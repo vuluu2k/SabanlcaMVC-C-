@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Sablanca.Models.Order_detail>
+
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+
+@section addcss{
+    <link href="~/wwwroot/css/custom/invoice.css" rel="stylesheet" />
+}
+
+<section class="single-banner inner-section">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="#">Chi tiết đơn hàng</a></li>
+            </ol>
+        </nav>
+    </div>
+</section>
+<section class="inner-section invoice-part">
+    <div class="container">
+        <div class="row">
+            @*<div class="col-lg-12">
+                    <div class="alert-info">
+                        <p>Cảm ơn bạn! Chúng tôi đã nhận được đơn đặt hàng của bạn.</p>
+                    </div>
+                </div>*@
+            <div class="col-lg-6">
+                <div class="account-card">
+                    <div class="account-title">
+                        <h4>Chi tiết đơn hàng</h4>
+                    </div>
+                    <div class="account-content">
+                        <ul class="invoice-details">
+                            <li>
+                                <h6>Mã đơn</h6>
+                                <p>#@ViewBag.OrderId</p>
+                            </li>
+                            <li>
+                                <h6>Tổng số sản phẩm</h6>
+                                <p>@ViewBag.Quantity sản phẩm</p>
+                            </li>
+                            <li>
+                                <h6>Ngày đặt</h6>
+                                <p>@ViewBag.CreatedAt</p>
+                            </li>
+                            <li>
+                                <h6>Địa chỉ giao hàng</h6>
+                                <p>@ViewBag.Address</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="account-card">
+                    <div class="account-title">
+                        <h4>Chi tiết số tiền</h4>
+                    </div>
+                    <div class="account-content">
+                        <ul class="invoice-details">
+                            <li>
+                                <h6>Tổng tiền</h6>
+                                <p>@string.Format("{0:#,##}", ViewBag.Price) vnđ</p>
+                            </li>
+                            <li>
+                                <h6>Giảm giá</h6>
+                                <p>0 vnđ</p>
+                            </li>
+                            <li>
+                                <h6>Phương thức thanh toán</h6>
+                                <p>Khi nhận hàng</p>
+                            </li>
+                            <li>
+                                <h6>Thành tiền</h6>
+                                <p>@string.Format("{0:#,##}", ViewBag.Price) vnđ</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="table-scroll">
+                    <table class="table-list">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Ảnh</th>
+                                <th scope="col">Tên</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Số lượng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="table-serial">
+                                        <h6>01</h6>
+                                    </td>
+                                    <td class="table-image">
+                                        <img src="~/wwwroot/product/images/@item.Product.product_image" alt="product" />
+                                    </td>
+                                    <td class="table-name">
+                                        <h6>@item.Product.product_name</h6>
+                                    </td>
+                                    <td class="table-price">
+                                        <h6>@string.Format("{0:#,##}", item.Product.product_price) vnđ</h6>
+                                    </td>
+                                    <td class="table-quantity">
+                                        <h6>@item.quantity</h6>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center mt-5">
+                <a class="btn btn-inline" href="#"><i class="icofont-download"></i><span>Tải hoá đơn</span></a>
+                <div class="back-home">
+                    <a href="@Url.Action("Index","Home") ">Trở về trang chủ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const removeLocalStorage = () => {
+        localStorage.removeItem("productIds");
+        localStorage.removeItem("amount");
+    }
+
+    removeLocalStorage();
+</script>

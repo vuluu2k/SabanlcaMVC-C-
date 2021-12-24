@@ -1,0 +1,176 @@
+﻿@model Sablanca.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content container-fluid">
+    <h2>Chi tiết sản phẩm</h2>
+
+    <div>
+        <dl class="dl-horizontal">
+            <table>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.DanhMuc.TenDM)</th>
+                    <td>@Html.DisplayFor(model => model.DanhMuc.TenDM)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.TenSP)</th>
+                    <td>@Html.DisplayFor(model => model.TenSP)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.GiaBan)</th>
+                    <td>@Html.DisplayFor(model => model.GiaBan)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.GiaGoc)</th>
+                    <td>@Html.DisplayFor(model => model.GiaGoc)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.MauSac)</th>
+                    <td>@Html.DisplayFor(model => model.MauSac)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.ChatLieu)</th>
+                    <td>@Html.DisplayFor(model => model.ChatLieu)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.LoaiDayDeo)</th>
+                    <td>@Html.DisplayFor(model => model.LoaiDayDeo)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.KichThuoc)</th>
+                    <td>@Html.DisplayFor(model => model.KichThuoc)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.SoNgan)</th>
+                    <td>@Html.DisplayFor(model => model.SoNgan)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.Dong)</th>
+                    <td>@Html.DisplayFor(model => model.Dong)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.MoTaSP)</th>
+                    <td>@Html.DisplayFor(model => model.MoTaSP)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.AnhSP)</th>
+                    <td>
+                        @{
+                            string ImagePath = "~/wwwroot/AnhSP/" + Model.AnhSP;
+                                        }
+                                        <img src="@Url.Content(ImagePath)" width="300" class="img-thumbnail" />
+                                        <br />
+                                        @Html.DisplayFor(model => model.AnhSP)
+                                    </td>
+                </tr>
+            </table>
+            @*<dt>
+                @Html.DisplayNameFor(model => model.DanhMuc.TenDM)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DanhMuc.TenDM)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TenSP)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenSP)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GiaBan)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GiaBan)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GiaGoc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GiaGoc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MauSac)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MauSac)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ChatLieu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ChatLieu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LoaiDayDeo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LoaiDayDeo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.KichThuoc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.KichThuoc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoNgan)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoNgan)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Dong)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Dong)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MoTaSP)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MoTaSP)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AnhSP)
+            </dt>
+
+            <dd>
+                @{
+                    string ImagePath = "~/wwwroot/AnhSP/" + Model.AnhSP;
+                }
+                <img src="@Url.Content(ImagePath)" width="300" class="img-thumbnail" />
+                <br />
+                @Html.DisplayFor(model => model.AnhSP)
+            </dd>*@
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.MaSP }) |
+        @Html.ActionLink("Quay lại", "Index")
+    </p>
+</div>

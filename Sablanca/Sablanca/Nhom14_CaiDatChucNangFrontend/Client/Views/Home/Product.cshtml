@@ -1,0 +1,132 @@
+﻿@model Sablanca.Models.SanPham
+@{
+    ViewBag.Title = Model.TenSP;
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+@{ Html.RenderPartial("_BreadcrumbLevelTwo"); }
+@*@{ Html.RenderAction("_BreadcrumbLevelTwo", "Base", new { id = ViewContext.RouteData.Values["id"].ToString() }); }*@
+<section class="inner-section">
+    <div class="container">
+        <div class="row">
+            @*<div class="col-lg-6">
+                    <div class="details-gallery">
+                        <ul class="details-preview">
+                            <li>
+                                <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg" style="width: 600px;"
+                                     alt="product" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>*@
+            <div class="col-lg-6 col-md-6 text-center">
+                <div style="height: 400px" class="bg-white rounded">
+                    <img class="img-" style="height: 100%" src="@Url.Content("~/wwwroot/AnhSP/" + @Model.AnhSP)"
+                         alt="product" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="details-content" style="height: 400px">
+                    <h3 class="details-name">
+                        @*<a>Túi xách tay quai cầm phối vải HB0119</a>*@
+                        <a>@Model.TenSP</a>
+                    </h3>
+                    <p class="details-desc">
+                        <br />
+                        Mã SP:
+                        <a>@Model.MaSP</a>
+                    </p>
+
+                    <h3 class="details-price">
+                        @*<span>810,000₫</span>  <del>845,000đ</del>*@
+                        <div>
+
+                            <span>@string.Format("{0:#,##}", Model.GiaBan)đ</span>
+                            <div style="font-size: 14px;font-style: italic;">Hoặc chỉ trả trước <span>@string.Format("{0:#,##}", Model.GiaGoc)đ x 3 kỳ</span> </div>
+                        </div>
+
+                        @* Hoặc chỉ trả trước: <span>@string.Format("{0:#,##}", Model.GiaGoc) vnđ x 3 kỳ</span>
+                            <br />*@
+
+                    </h3>
+                    <p class="details-desc">
+                        Màu sắc:
+                        <a>@Model.MauSac</a>
+                    </p>
+
+                    <!-- <p class="details-desc">
+                    Tình trạng:
+                    <label class="details-label new">còn hàng</label> -->
+                    <!-- <label class="details-label off">hết hàng</label> -->
+                    </p>
+                    <div class="details-add-group">
+                        @*<button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i><span>thêm vào giỏ hàng</span>
+                            </button>*@
+                        <button class="product-add" onclick="addToCart(@Model.MaSP @*, @Model.product_amount*@)" title="Add to Cart">
+                            <i class="fas fa-shopping-basket"></i><span>Thêm vào giỏ hàng</span>
+                        </button>
+                        <div class="product-action">
+                            <button class="action-minus" title="Quantity Minus">
+                                <i class="icofont-minus"></i>
+                            </button><input class="action-input" title="Quantity Number" type="text"
+                                            name="quantity" value="1" /><button class="action-plus" title="Quantity Plus">
+                                <i class="icofont-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="inner-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product-details-frame">
+                    <h3 class="frame-title">Mô tả sản phẩm</h3><br />
+                    <div class="tab-descrip">
+                        <p class="details-desc">
+                            Chất liệu:
+                            @Model.ChatLieu
+                            <br />
+                        </p>
+                        <p class="details-desc">
+                            Kích Thước:
+                            @Model.KichThuoc
+                            <br />
+                        </p>
+                        <p class="details-desc">
+                            Số ngăn:
+                            @Model.SoNgan
+                            <br />
+                        </p>
+                        <p class="details-desc">
+                            Dòng:
+                            @Model.Dong
+                            <br />
+                        </p>
+                        <br>
+                        <p class="details-desc">
+
+                            Mô tả
+                            @*- Quai cầm phối vải tinh tế, xinh xắn. Liệu vân da nổi bền, đẹp.<br>
+                                - Phom túi cỡ trung chứa đủ các vật dụng cá nhân cơ bản như điện thoại, ví tiền ngắn, mỹ phẩm cơ bản.<br>
+                                - Gam màu  hiện đại trẻ trung, dễ dàng kết hợp trang phục.*@
+                            <br />
+                            @Model.MoTaSP
+                        </p>
+                        <p>
+                            <br />
+
+                            <img class="img-" style="height: 200px " src="@Url.Content("~/wwwroot/AnhSP/" + @Model.AnhSP)"
+                                 alt="product" />
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

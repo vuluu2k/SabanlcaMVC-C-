@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "Invoice";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+<section class="single-banner inner-section">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="#">Chi tiết đơn hàng</a></li>
+            </ol>
+        </nav>
+    </div>
+</section>
+<section class="inner-section invoice-part">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="alert-info">
+                    <p>Cảm ơn bạn! Chúng tôi đã nhận được đơn đặt hàng của bạn.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="account-card">
+                    <div class="account-title">
+                        <h4>Chi tiết đơn hàng:</h4>
+                    </div>
+                    <div class="account-content">
+                        <ul class="invoice-details">
+                            <li>
+                                <h6>Mã đơn hàng: <span>13123</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Họ tên: <span>Hoàng Thị Trang</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Số điện thoại: <span>0397346019</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Địa chỉ giao hàng: <span>Nguyên Xá, Bắc Từ Liêm, Hà Nội</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Ngày đặt: <span>09/09/2021</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Tình trạng: <span>Chờ xác nhận</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Hình thức thanh toán: <span>Khi nhận hàng</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Ghi chú: <span>Không</span></h6>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="account-card">
+                    <div class="account-title">
+                        <h4>Chi tiết sản phẩm:</h4>
+                    </div>
+                    <div class="account-content">
+                        <ul class="invoice-details">
+                            <li>
+                                <h6>Tổng số sản phẩm: <span>2 sản phẩm</span></h6>
+
+                            </li>
+                            <li>
+                                <h6>Tổng tiền: <span>1.220.000đ</span></h6>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="table-scroll">
+                    <table class="table-list">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Ảnh</th>
+                                <th scope="col">Tên</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Số lượng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-serial">
+                                    <h6>01</h6>
+                                </td>
+                                <td class="table-image">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg" alt="product" />
+                                </td>
+                                <td class="table-name">
+                                    <h6>Túi xách tay quai cầm phối vải HB0119</h6>
+                                </td>
+                                <td class="table-price">
+                                    <h6>810.000đ<small></small></h6>
+                                </td>
+                                <td class="table-quantity">
+                                    <h6>1</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-serial">
+                                    <h6>02</h6>
+                                </td>
+                                <td class="table-image">
+                                    <img src="~/wwwroot/images/product/02.jpg" alt="product" />
+                                </td>
+                                <td class="table-name">
+                                    <h6>Ví cầm tay họa tiết dập chỉ WA0149</h6>
+                                </td>
+                                <td class="table-price">
+                                    <h6>410.000đ<small></small></h6>
+                                </td>
+                                <td class="table-quantity">
+                                    <h6>1</h6>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center mt-5">
+                <a class="btn btn-inline" href="#"><i class="icofont-download"></i><span>Tải hoá đơn</span></a>
+                <div class="back-home">
+                    <a href="@Url.Action("Index","Home")">Trở về trang chủ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

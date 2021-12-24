@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from truelysell-admin.dreamguystech.com/template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jun 2021 14:22:17 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>Đăng nhập quản trị</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="~/wwwroot/images/favicon.ico" />
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet"
+          href="~/Areas/Admin/assets/plugins/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/plugins/fontawesome/css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="~/Areas/Admin/assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/admin.css" />
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="login-page">
+            <div class="login-body container">
+                <div class="loginbox">
+                    <div class="login-right-wrap">
+                        <div class="account-header">
+                            <img src="~/wwwroot/images/favicon.ico" />
+                            <div class="account-logo text-center mb-4">
+                                <a href="@Url.Action("Dashboard","Home")">
+                                    <img src="~/Areas/Admin/assets/img/logo-icon.png"
+                                         alt=""
+                                         class="img-fluid" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="login-header">
+                            <h3>Đăng nhập <span>Sablanca</span></h3>
+                            <p class="text-muted">Truy cập trang quản trị</p>
+                        </div>
+                        <form action="@Url.Action("Dashboard","Home")">
+                            <div class="form-group">
+                                <label class="control-label">Email</label>
+                                <input class="form-control"
+                                       type="text"
+                                       placeholder="Ngvanthin@gmail.com" />
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="control-label">Mật khẩu</label>
+                                <input class="form-control"
+                                       type="password"
+                                       placeholder="123456" />
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-block account-btn"
+                                        type="submit">
+                                    Đăng nhập
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Areas/Admin/assets/js/jquery-3.5.0.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="~/Areas/Admin/assets/js/popper.min.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Areas/Admin/assets/js/admin.js"></script>
+</body>
+
+<!-- Mirrored from truelysell-admin.dreamguystech.com/template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jun 2021 14:22:17 GMT -->
+</html>

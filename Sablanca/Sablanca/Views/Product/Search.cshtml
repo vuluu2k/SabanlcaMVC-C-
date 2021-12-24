@@ -1,0 +1,131 @@
+﻿@model PagedList.IPagedList<Sablanca.Models.Product>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Tìm kiếm";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+<section class="inner-section single-banner">
+    <div class="container">
+        <h2 id="hdk-category-name">Tất cả sản phẩm</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Tất cả sản phẩm
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="inner-section shop-part">
+    <div class="container">
+        <div class="row content-reverse">
+            <div class="col-lg-3">
+                <div class="shop-widget-promo">
+
+                    <a href="#"><img src="~/wwwroot/images/promo/shop/01.jpg" alt="promo" /></a>
+                </div>
+                <div class="shop-widget">
+                    <h6 class="shop-widget-title">Lọc theo giá</h6>
+                    <form>
+                        <div class="shop-widget-group">
+                            <input value="@ViewBag.from" type="number" placeholder="Bắt đầu" id="fromPrice" /><input value="@ViewBag.to" id="toPrice" type="number" placeholder="Kết thúc" />
+                        </div>
+                        <button type="button" onclick="filterProduct()" class="shop-widget-btn">
+                            <i class="fas fa-search"></i><span>Tìm</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="shop-widget">
+                    <h6 class="shop-widget-title">Lọc theo danh mục</h6>
+                    <form>
+                        <ul class="shop-widget-list shop-widget-scroll">
+                            @foreach (var item in ViewBag.Categories)
+                            {
+                                <li>
+                                    <div class="shop-widget-content">
+                                        <input name="category" type="checkbox" value="@item.category_id" id="cate-@item.category_id"><label for="cate-@item.category_id">@item.category_name</label>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                        <button type="button" id="cate-filter" class="shop-widget-btn">
+                            <i class="fas fa-search"></i><span>Tìm</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="top-filter col-lg-9">
+                                <div class="filter-short">
+                                    <label class="filter-label">Sắp xếp theo :</label>
+                                    <select id="filter" onchange="onSort()" class="form-select filter-select">
+                                        <option id="hdk-default" value="default" selected>Mặc định</option>
+                                        <option id="hdk-asc" value="asc">Giá từ thấp tới cao</option>
+                                        <option id="hdk-desc" value="desc">Giá từ cao tới thấp</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <button type="button" onclick="clearFilter()" class="shop-widget-btn"><i class="far fa-trash-alt"></i>Xoá bộ lọc</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <img src="@Url.Content("~/wwwroot/product/images/" + item.product_image)"
+                                         alt="product" width="100%" height="150px" class="img-responsive center-block" />
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="product-name">
+                                        <a href="@Url.Action("Detail","Product",  new { id = item.product_id })">@item.product_name</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span>@string.Format("{0:#,##}", item.product_price) vnđ</span>
+                                    </h6>
+                                    <button class="product-add" onclick="addToCart(@item.product_id)" title="Thêm vào giỏ">
+                                        <i class="fas fa-shopping-basket"></i><span>Thêm vào giỏ hàng</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <input value="@ViewBag.order" id="viewbag" hidden="hidden" />
+                <input value="@ViewBag.keyword" id="keyword-hidden" hidden="hidden" />
+                <input value="@ViewBag.category" id="cate-hidden" hidden="hidden" />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bottom-paginate">
+                            @Html.PagedListPager(Model, page => Url.Action("Search", new
+                               {
+                                   page = page,
+                                   fromPrice = ViewBag.from,
+                                   toPrice = ViewBag.to,
+                                   order = ViewBag.order,
+                                   keyword = ViewBag.keyword,
+                                   category = ViewBag.category
+                               }), new PagedListRenderOptions()
+                               {
+                                   LiElementClasses = new string[] { "page-item", "page-link" }
+                               })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script src="~/Scripts/filterrr.js"></script>
+}

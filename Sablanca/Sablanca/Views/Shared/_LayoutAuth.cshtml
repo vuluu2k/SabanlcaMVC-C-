@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="mironcoder" />
+    <meta name="email" content="mironcoder@gmail.com" />
+    <meta name="profile" content="https://themeforest.net/user/mironcoder" />
+    <meta name="template" content="Organe" />
+    <meta name="title" content="Sablanca - Phong cách thời trang theo xu hướng quốc tế" />
+    <meta name="keywords" content="giày dép nữ thời trang, túi xách nữ thời trang, ví nữ thời trang, ba lô nữ thời trang" />
+    <title>@ViewBag.Title - Sablanca</title>
+    <link rel="icon" href="~/wwwroot/images/favicon.ico" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/fonts/fontawesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/nice-select.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/venobox.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/slick.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/custom/main.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/custom/index.css" />
+
+    @RenderSection("addcss", required: false)
+</head>
+
+<body>
+    <section class="user-form-part">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div class="user-form-logo">
+                        <a href="index.html">
+                            <img src="~/wwwroot/images/logo_sab.png"
+                                 alt="logo" />
+                        </a>
+                    </div>
+                    <div class="user-form-card">
+                        <div class="user-form-title">
+                            <h2>@RenderSection("title", required: true)</h2>
+                            <p>@RenderSection("subtitle", required: true)</p>
+                        </div>
+                        @RenderBody()
+                    </div>
+                    <div class="user-form-footer">
+                        <p>&copy; Bản quyền thuộc về nhóm 14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/wwwroot/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/wwwroot/js/vendor/popper.min.js"></script>
+    <script src="~/wwwroot/js/vendor/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+<!-- Mirrored from mironmahmud.com/organe/assets/ltr/change-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jun 2021 14:24:42 GMT -->
+
+</html>

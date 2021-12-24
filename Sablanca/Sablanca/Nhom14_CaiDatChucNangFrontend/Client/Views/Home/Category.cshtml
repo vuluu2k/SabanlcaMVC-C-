@@ -1,0 +1,339 @@
+﻿
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+@*@{ Html.RenderPartial("_BreadcrumbLevelOne");}*@
+
+<section class="inner-section shop-part">
+    <div class="container">
+        <div class="row content-reverse">
+            <div class="col-lg-3">
+                <div class="shop-widget-promo">
+                    <a href="#"><img src="~/wwwroot/images/promo/shop/01.jpg" alt="promo" /></a>
+                </div>
+                <div class="shop-widget">
+                    <h6 class="shop-widget-title">Lọc theo giá</h6>
+                    <form>
+                        <div class="shop-widget-group">
+                            <input type="text" placeholder="Bắt đầu" /><input type="text"
+                                                                              placeholder="Kết thúc" />
+                        </div>
+                        <button class="shop-widget-btn">
+                            <i class="fas fa-search"></i><span>tìm</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="shop-widget">
+                    <h6 class="shop-widget-title">lọc theo danh mục</h6>
+                    <form>
+                        <ul class="shop-widget-list shop-widget-scroll">
+                            <li>
+                                <div class="shop-widget-content">
+                                    <input type="checkbox" id="cate1" /><label for="cate1">Túi xách</label>
+                                </div>
+                                <!-- <span class="shop-widget-number">(13)</span> -->
+                            </li>
+                            <li>
+                                <div class="shop-widget-content">
+                                    <input type="checkbox" id="cate1" /><label for="cate1">Ví</label>
+                                </div>
+                                <!-- <span class="shop-widget-number">(13)</span> -->
+                            </li>
+                            <li>
+                                <div class="shop-widget-content">
+                                    <input type="checkbox" id="cate1" /><label for="cate1">Balo</label>
+                                </div>
+                                <!-- <span class="shop-widget-number">(13)</span> -->
+                            </li>
+                        </ul>
+                        <button class="shop-widget-btn">
+                            <i class="far fa-trash-alt"></i><span>Xoá bộ lọc</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="top-filter">
+                            <div class="filter-short">
+                                <label class="filter-label">Sắp xếp theo :</label><select class="form-select filter-select">
+                                    <option selected>mặc định</option>
+                                    <option value="3">mới nhất</option>
+                                    <option value="1">giá từ thấp tới cao</option>
+                                    <option value="2">giá từ cao tới thấp</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <a class="product-image" href="@Url.Action("Product","Home")">
+                                    <img src="~/wwwroot/images/product/hb0119_wht_1000x1000_2116264165.jpg"
+                                         alt="product" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h6 class="product-name">
+                                    <a href="product.html">Túi xách tay quai cầm phối vải HB0119</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    <span>810,000₫ </span> <del> 845,000đ</del>
+                                </h6>
+                                <button class="product-add" title="Add to Cart">
+                                    <i class="fas fa-shopping-basket"></i><span>mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bottom-paginate">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class="fas fa-long-arrow-alt-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link active" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">...</li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">60</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class="fas fa-long-arrow-alt-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Add_product";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="page-title">Thêm sản sản phẩm</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Header -->
+
+            <div class="card">
+                <div class="card-body">
+                    <!-- Form -->
+                    <form action="@Url.Action("Products","Home")">
+                        <div class="form-group">
+                            <label>Mã sản phẩm</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Mã danh mục</label>
+                            <input class="form-control" type="text" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tên sản phẩm</label>
+                            <input class="form-control" type="number" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giá bán</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giá giảm</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Màu sắc</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Chất liệu</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Loại dây đeo</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Kích thước</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Số ngăn</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label>Dòng</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mô tả</label>
+                            <div class="centered">
+                                <div class="editor-container">
+                                    <div class="editor"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="submit">
+                                Thêm
+                            </button>
+                            <a href="@Url.Action("Products","Home")" class="btn btn-link">Huỷ</a>
+                        </div>
+                    </form>
+                    <!-- /Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

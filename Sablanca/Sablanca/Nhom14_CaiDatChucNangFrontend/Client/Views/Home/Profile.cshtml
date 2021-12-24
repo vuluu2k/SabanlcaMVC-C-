@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+<section class="inner-section single-banner">
+    <div class="container">
+        <h2>Thông tin tài khoản</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Thông tin tài khoản</li>
+        </ol>
+    </div>
+</section>
+<section class="inner-section profile-part">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="account-card">
+                    <div class="account-title">
+                        <h4>Thông tin tài khoản</h4>
+                    </div>
+                    <div class="account-content">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="profile-image">
+                                    <a href="#"><img src="~/wwwroot/images/user.png" alt="user" /></a>
+                                </div>
+                            </div>
+                            @*<div class="col-md-6 col-lg-4">
+                                    <div class="profile-image">
+                                        <a href="#"><img src="~/wwwroot/images/user.png" alt="user" /></a>
+                                    </div>
+                                </div>*@
+                            <div class="col-md-6 col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label">Họ tên</label><input class="form-control"
+                                                                                   type="text"
+                                                                                   value="Hoàng Thị Trang" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Điện thoại</label><input class="form-control"
+                                                                                       type="text"
+                                                                                       value="0397346019" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Địa chỉ</label><input class="form-control"
+                                                                                    type="text"
+                                                                                    value="Nguyên Xá, Bắc Từ Liêm, Hà Nội" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label><input class="form-control"
+                                                                                  type="email"
+                                                                                  value="tranght@gmail.com" />
+                                </div>
+
+                                <button class="form-btn" type="submit">cập nhật</button>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label">Mật khẩu cũ</label><input class="form-control"
+                                                                                        type="password"
+                                                                                        value="123456" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Mật khẩu mới</label><input class="form-control"
+                                                                                         type="password"
+                                                                                         value="123456" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nhập lại mật khẩu</label><input class="form-control"
+                                                                                              type="password"
+                                                                                              value="123456" />
+                                </div>
+                                <button class="form-btn" type="submit">cập nhật</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

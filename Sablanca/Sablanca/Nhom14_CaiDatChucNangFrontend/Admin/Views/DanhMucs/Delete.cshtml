@@ -1,0 +1,55 @@
+﻿@model Sablanca.Models.DanhMuc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content container-fluid">
+    <h2>Xóa danh mục</h2>
+
+    <h3>Bạn có chắc chắc muốn xóa bản ghi này không?</h3>
+    <div>
+        <dl class="dl-horizontal">
+            <table>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.TenDM)</th>
+                    <td>@Html.DisplayFor(model => model.TenDM)</td>
+                </tr>
+                <tr>
+                    <th width="150px">@Html.DisplayNameFor(model => model.MoTa)</th>
+                    <td>@Html.DisplayFor(model => model.MoTa)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            @*<dt>
+                @Html.DisplayNameFor(model => model.TenDM)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TenDM)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MoTa)
+            </dd>*@
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Xóa" class="btn btn-default" /> |
+                @Html.ActionLink("Quay lại", "Index")
+            </div>
+        }
+</div>
+    

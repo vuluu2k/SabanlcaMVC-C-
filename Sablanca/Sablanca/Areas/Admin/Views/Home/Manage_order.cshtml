@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Manager_order";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content container-fluid">
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="page-title">Quản lý đơn hàng</h3>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead class="text-center">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Mã đơn hàng</th>
+                                    <th>Mã tài khoản</th>
+                                    <th>Họ tên khách hàng</th>
+                                    <th>Điện thoại khách hàng</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Ngày đặt</th>
+                                    <th>Tinh trạng đặt hàng</th>
+                                    <th>Hình thức thanh toán</th>
+                                    <th>Ghi chú</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>202109211</td>
+                                    <td>20212</td>
+                                    <td>Đỗ Thị Quyên</td>
+                                    <td>0362840875</td>
+                                    <td>Xã Minh Trí Huyện Sóc Sơn TP Hà Nội</td>
+                                    <td>2021-09-21</td>
+                                    <td>Đang Vận Chuyển</td>
+                                    <td>Thanh toán khi nhận hàng</td>
+                                    <td>Giao giờ hành chính</td>
+                                    <td>
+                                        <a class="btn btn-sm bg-success-light mr-2">Cập nhật</a>
+                                        <a class="btn btn-sm bg-success-light mr-2" href="@Url.Action("Order_detail","Home")">Chi tiết</a>
+                                    </td>
+                                </tr>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>2</td>
+                                    <td>202109221</td>
+                                    <td>20213</td>
+                                    <td>Hoàng Thị Trang</td>
+                                    <td>0397346019</td>
+                                    <td>Xã Hải Vân Huyện Như Thanh Tỉnh Thanh Hóa</td>
+                                    <td>2021-09-22</td>
+                                    <td>Đang Vận Chuyển</td>
+                                    <td>Thanh toán bằng ZaloPay</td>
+                                    <td>Không</td>
+                                    <td>
+                                        <a class="btn btn-sm bg-success-light mr-2">Cập nhật</a>
+                                        <a class="btn btn-sm bg-success-light mr-2" href="@Url.Action("Order_detail","Home")">Chi tiết</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

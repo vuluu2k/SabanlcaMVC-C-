@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Order_detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content container-fluid">
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col">
+                <h3 class="page-title">Chi tiết đơn hàng</h3>
+            </div>
+            <div class="col-auto text-right">
+                <a class="btn btn-primary add-button ml-3">
+                    <i class="fas fa-print"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p><b>Người mua: </b> <span>Hoàng Thị Trang</span></p>
+                            <p><b>Địa chỉ: </b> <span>Xã Hải Vân Huyện Như Thanh Tỉnh Thanh Hóa</span></p>
+                            <p><b>Số điện thoại: </b> <span>0397346019</span></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><b>Mã sản phẩm: </b> <span>T0052</span></p>
+                            <p><b>Mã đơn hàng: </b> <span>202109221</span></p>
+                            <p><b>Ngày tạo:</b> <span>2021-09-21</span></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <img class="rounded service-img mr-1"
+                                             alt="" />
+                                        Túi xách tay cỡ lớn đơn giản
+                                    </td>
+                                    <td>835.000đ</td>
+                                    <td>1</td>
+                                    <td>835.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-9"></div>
+                        <div class="col-md-3">
+                            <p><b>Tổng: </b> <span>835.000đ</span></p>
+                            <p><b>Giảm giá: </b> <span>10%</span></p>
+                            <p><b>Thành tiền: </b> <span>751.500đ</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+﻿@model Sablanca.Models.TaiKhoan
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>TaiKhoan</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.HoTen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HoTen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SDT)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SDT)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DiaChi)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MatKhau)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaTK }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

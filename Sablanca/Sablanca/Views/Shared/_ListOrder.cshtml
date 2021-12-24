@@ -1,0 +1,58 @@
+﻿
+@model IEnumerable<Sablanca.Models.Custom_order>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="account-card">
+                <div class="account-title">
+                    <h4>Lịch sử mua hàng</h4>
+                </div>
+                <div class="table-scroll">
+                    @if (Model != null)
+                    {
+                        <table class="table-list">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mã đơn</th>
+                                    <th scope="col">Tổng tiền</th>
+                                    <th scope="col">Ngày tạo</th>
+                                    <th scope="col">Trạng thái</th>
+                                    <th scope="col">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="table-serial">
+                                            <h6>@item.order_id</h6>
+                                        </td>
+                                        <td class="table-name">
+                                            <h6>@string.Format("{0:#,##}", item.amount) vnđ</h6>
+                                        </td>
+                                        <td class="table-brand">
+                                            <h6>@item.created_at</h6>
+                                        </td>
+                                        <td class="table-quantity">
+                                            <h6>@item.status</h6>
+                                        </td>
+                                        <td class="table-action">
+                                            <a class="view" href="/Invoice/Index/@item.order_id">
+                                                <i class="fas fa-eye"></i> <span style="color: #198754">Chi tiết</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <h1 class="text-center">Chưa có đơn hàng</h1>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

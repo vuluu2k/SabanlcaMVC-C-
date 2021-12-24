@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Sablanca.Models.DanhMuc>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content container-fluid">
+    <h2>Danh mục</h2>
+
+    <p>
+        @Html.ActionLink("Thêm mới", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th width="250px">
+                @Html.DisplayNameFor(model => model.TenDM)
+            </th>
+            <th width="1100px">
+                @Html.DisplayNameFor(model => model.MoTa)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="250px">
+                    @Html.DisplayFor(modelItem => item.TenDM)
+                </td>
+                <td width="1100px">
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaDM }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MaDM }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaDM })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+    

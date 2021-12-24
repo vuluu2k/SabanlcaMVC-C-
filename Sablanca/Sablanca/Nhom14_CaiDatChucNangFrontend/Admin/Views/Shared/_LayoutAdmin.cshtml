@@ -1,0 +1,132 @@
+﻿=ơ;<!DOCTYPE html>
+<link href="~/Areas/Admin/assets/css/admin.css" rel="stylesheet" />
+<html lang="en">
+<!-- Mirrored from truelysell-admin.dreamguystech.com/template/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jun 2021 14:21:50 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>Trang quản trị</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="~/wwwroot/images/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="~/Areas/Admin/assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet"
+          href="~/Areas/Admin/assets/plugins/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/plugins/fontawesome/css/all.min.css" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/animate.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/admin.css" />
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <a href="@Url.Action("Dashboard","Home")" class="logo logo-small">
+                    <img src="~/Areas/Admin/assets/img/logo-icon.png"
+                         alt="Logo"
+                         width="30"
+                         height="30" />
+                </a>
+            </div>
+            <a href="javascript:void(0);" id="toggle_btn">
+                <i class="fas fa-align-left"></i>
+            </a>
+            <a class="mobile_btn" id="mobile_btn" href="javascript:void(0);">
+                <i class="fas fa-align-left"></i>
+            </a>
+
+            <ul class="nav user-menu">
+                <!-- User Menu -->
+                <li class="nav-item dropdown">
+                    <a href="javascript:void(0)"
+                       class="dropdown-toggle user-link nav-link"
+                       data-toggle="dropdown">
+                        <span class="user-img">
+                            <img class="rounded-circle"
+                                 src="~/Areas/Admin/assets/img/user.jpg"
+                                 width="40"
+                                 alt="Admin" />
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="@Url.Action("Index","Home")">Đăng xuất</a>
+                    </div>
+                </li>
+                <!-- /User Menu -->
+            </ul>
+        </div>
+        <!-- /Header -->
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <a href="@Url.Action("Dashboard","Home")">
+                    <img src="~/wwwroot/images/logo_sab.png"
+                         class="img-fluid"
+                         alt="" />
+                </a>
+            </div>
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="@Url.Action("Dashboard","Home")"><i class="fas fa-columns"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","DanhMucs")">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Quản lý danh mục</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","SanPhams")">
+                                <i class="fab fa-buffer"></i>
+                                <span>Quản lý sản phẩm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Manage_order","Home")">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Quản lý đơn hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Account","Home")"><i class="fas fa-user"></i> <span>Quản lý tài khoản</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+
+        <div class="page-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Areas/Admin/assets/js/jquery-3.5.0.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="~/Areas/Admin/assets/js/popper.min.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Slimscroll JS -->
+    <script src="~/Areas/Admin/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Areas/Admin/assets/js/admin.js"></script>
+</body>
+
+<!-- Mirrored from truelysell-admin.dreamguystech.com/template/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jun 2021 14:22:07 GMT -->
+</html>

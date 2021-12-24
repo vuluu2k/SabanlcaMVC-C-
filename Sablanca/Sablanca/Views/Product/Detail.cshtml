@@ -1,0 +1,74 @@
+﻿@model Sablanca.Models.Product
+
+@{
+    ViewBag.Title = Model.product_name;
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+@section addcss{
+    <link rel="stylesheet" href="~/wwwroot/css/custom/product-detaill.css" />
+}
+
+@{ Html.RenderAction("_BreadcrumbLevelTwo", "Base", new { id = ViewContext.RouteData.Values["id"].ToString() }); }
+
+<section class="inner-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+                <div style="height: 400px" class="bg-white rounded">
+                    <img class="img-" style="height: 100%" src="@Url.Content("~/wwwroot/product/images/" + @Model.product_image)"
+                         alt="product" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="details-content" style="height: 400px">
+                    <h3 class="details-name">
+                        <a>@Model.product_name</a>
+                    </h3>
+                    <h3 class="details-price">
+                        <span>@string.Format("{0:#,##}", Model.product_price) vnđ</span>
+                    </h3>
+                    @*<p class="details-desc">
+                        Trọng lượng: @Model.product_weight
+                    </p>
+                    <p class="details-desc">
+                        Xuất xứ: @Model.product_source
+                    </p>*@
+                    <p class="details-desc">
+                        Tình trạng:
+                        @if (Model.product_amount > 0)
+                        {
+                            <label class="details-label new">Còn hàng</label>
+                        }
+                        else
+                        {
+                            <label class="details-label off">Hết hàng</label>
+                        }
+                    </p>
+                    <div class="details-add-group">
+                        <button class="product-add" onclick="addToCart(@Model.product_id, @Model.product_amount)" title="Add to Cart">
+                            <i class="fas fa-shopping-basket"></i><span>Thêm vào giỏ hàng</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="inner-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product-details-frame">
+                    <h3 class="frame-title">Mô tả</h3>
+                    <div class="tab-descrip">
+                        <p>
+                            @Model.product_description
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
