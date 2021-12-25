@@ -42,6 +42,11 @@ namespace Sablanca.Controllers
             }
             return View();
         }
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Index","TaiKhoans");
+        }
         // GET: TaiKhoans/Details/5
         public ActionResult Details(int? id)
         {
@@ -68,13 +73,13 @@ namespace Sablanca.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaTK,HoTen,SDT,DiaChi,Email,MatKhau")] TaiKhoan taiKhoan)
+        public ActionResult Create([Bind(Include = "HoTen,SDT,DiaChi,Email,MatKhau")] TaiKhoan taiKhoan)
         {
             if (ModelState.IsValid)
-            {
+            {   
                 db.TaiKhoans.Add(taiKhoan);
                 db.SaveChanges();
-                return RedirectToAction("Login");
+                return RedirectToAction("Index");
             }
 
             return View(taiKhoan);

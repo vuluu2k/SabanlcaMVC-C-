@@ -23,9 +23,14 @@
             }
             else
             {
-                <a href="@Url.Action("Details","TaiKhoans", new { id=Session["idUser"] })" class="header-widget" title="My Account">
+                <a href="@Url.Action("Edit","TaiKhoans", new { id=Session["idUser"] })" class="header-widget" title="My Account">
                     <img src="~/wwwroot/images/user.png" alt="user"><span>@Session["HoTen"]</span>
                 </a>
+                <div style="background-color:#c3654b; padding: 2px 5px;border-radius:5px; margin-left:5px">
+                    <a href="@Url.Action("Logout","TaiKhoans")" style="color:#FFF;font-size:14px">
+                        Thoát
+                    </a>
+                </div>
             }
 
 

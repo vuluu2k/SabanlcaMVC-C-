@@ -17,6 +17,7 @@ namespace Sablanca.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        
         public int MaTK { get; set; }
 
         [StringLength(50)]
